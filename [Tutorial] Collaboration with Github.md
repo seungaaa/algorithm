@@ -65,7 +65,7 @@ ex.
 
 []()
 
-1. Done으로 카드를 옮김
+4. Done으로 카드를 옮김
 
 ### **문제풀이 (목요일 18시 커밋분까지 유효)**
 
@@ -79,4 +79,4 @@ ex.
 
 []()
 
-1. 이 문제 다 풀면 projects → Algorithm Code → 카드를 Done 컬럼으로 옮김
+6. 이 문제 다 풀면 projects → Algorithm Code → 카드를 Done 컬럼으로 옮김
