@@ -45,7 +45,7 @@ Project는 현재 2개 생성함
 
 Project의 Card에서 해당 주차 풀어야할 문제를 `Convert to Issue` 함 → Issue number가 아래 그림처럼 생김. issue number 기억.
 
-![Collaboration%20with%20Github%207764100e36b44c1bbfb477bf4e63474f/Untitled.png](Collaboration%20with%20Github%207764100e36b44c1bbfb477bf4e63474f/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/25656426/128868421-350031f5-8f6a-4dc2-9246-bcafee573730.png)
 
 **note) milestone 기능**
 
@@ -63,7 +63,7 @@ Project의 Card에서 해당 주차 풀어야할 문제를 `Convert to Issue` �
 
 ex.
 
-[]()
+<img width="951" alt="Screen Shot 2021-08-10 at 9 42 02 PM" src="https://user-images.githubusercontent.com/25656426/128868740-db8a5f4e-1482-4fbc-b25a-eaf4e8ec3b7d.png">
 
 4. Done으로 카드를 옮김
 
@@ -76,7 +76,6 @@ ex.
 5. commit할 때 commit msg에다가 #issue_number 를 넣어서 커밋함 → 자동으로 이슈와 연결됨
 
 ex.
-
-[]()
+<img width="951" alt="Screen Shot 2021-08-10 at 9 42 02 PM" src="https://user-images.githubusercontent.com/25656426/128868740-db8a5f4e-1482-4fbc-b25a-eaf4e8ec3b7d.png">
 
 6. 이 문제 다 풀면 projects → Algorithm Code → 카드를 Done 컬럼으로 옮김
