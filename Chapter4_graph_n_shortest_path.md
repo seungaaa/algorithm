@@ -2,11 +2,12 @@
 title: "Graph & Shortest Path" 
 date: 2021-08-30
 description: "Algorithm seminar for basic graph and shortest path"
-author: @jean1042
 ---
+author: @jean1042
+
 
 # 1. Graph
-----------------------------
+
 ## 1-1. Definition
 ### 그래프란?
 그래프는 연결되어 있는 객체 간의 관계를 표현하는데 적합한 자료구조로, 다음과 같이 정의함
@@ -69,9 +70,9 @@ if 간선 `(i,j)`가 그래프에 존재하면 `M[i][j]=1`, 그렇지 않으면 
 
 그중에 우리 Jjeju회원들은..! shortest path 문제를 더 공부해봅시다.
 
+ 
+<br>
 
-
-----------------------------------------
 # 2. Shortest Path Problem (최단 경로 거리 문제)
 Shortest path problem은 가중 그래프에서 vertex `u`와 vertex `v`를 연결하는 경로 중에서 edge의 가중치 합이 최소가 되는 경로, 거리를 발견하는 문제.
 
