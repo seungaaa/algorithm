@@ -3,7 +3,6 @@ import java.util.HashMap;
 class Solution {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
-
         HashMap<String, Integer> phonebook = new HashMap<>();
 
         for(int i = 0; i < phone_book.length; i++) {

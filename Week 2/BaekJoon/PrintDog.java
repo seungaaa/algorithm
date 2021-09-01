@@ -1,5 +1,3 @@
-package algorithm;
-
 public class PrintDog {
 
 	public static void main(String[] args) {
