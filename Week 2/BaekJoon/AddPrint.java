@@ -1,8 +1,6 @@
-package algorithm;
-
 import java.util.Scanner;
 
-public class SubPrint {
+public class AddPrint {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -10,7 +8,7 @@ public class SubPrint {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		
-		System.out.println(a-b);
+		System.out.println(a+b);
 	}
 
 }

@@ -1,5 +1,3 @@
-package algorithm;
-
 public class PrintCat {
 
 	public static void main(String[] args) {

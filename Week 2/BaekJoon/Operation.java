@@ -1,8 +1,6 @@
-package algorithm;
-
 import java.util.Scanner;
 
-public class MultiPrint {
+public class Operation {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -10,8 +8,11 @@ public class MultiPrint {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		
+		System.out.println(a+b);
+		System.out.println(a-b);
 		System.out.println(a*b);
-
+		System.out.println(a/b);
+		System.out.println(a%b);
 	}
 
 }

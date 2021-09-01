@@ -1,8 +1,6 @@
-package algorithm;
-
 import java.util.Scanner;
 
-public class Operation {
+public class SubPrint {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -10,11 +8,7 @@ public class Operation {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		
-		System.out.println(a+b);
 		System.out.println(a-b);
-		System.out.println(a*b);
-		System.out.println(a/b);
-		System.out.println(a%b);
 	}
 
 }
