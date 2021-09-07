@@ -48,7 +48,7 @@ int main()
         }
     }
     for (int i = 1; i <= V; i++){
-        if (dist[i] == 1e9)
+        if (dist[i] == INF)
             cout << "INF\n";
         else
             cout << dist[i] << "\n";
