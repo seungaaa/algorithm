@@ -30,11 +30,10 @@ int main()
     dist[K] = 0;  //시작점 최단거리 = 0으로 초기화
     
     priority_queue<pair<int,int> > qu;
-    qu.push({0, K}); //우선순위 큐에 시작점 추가
+    qu.push({K, 0}); //우선순위 큐에 시작점 추가
 
     while(!qu.empty()){
-        int here = qu.top().second;     //here을 방문할 점의 번호
-        
+        int here = qu.top().first;
         qu.pop();
             
         for(int i = 0; i < arr[here].size(); i++){
@@ -44,12 +43,12 @@ int main()
             if(dist[next] > dist[here] + nextcost){
                 //현재 next에 저장된 dist의값보다 현재의 점을 거쳐서 갈 경우가 거리가 더 짧으면 갱신하여 큐에 추가
                 dist[next] = dist[here] + nextcost;
-                qu.push({-dist[next], next});
+                qu.push({next, -dist[next]});
             }
         }
     }
     for (int i = 1; i <= V; i++){
-        if (dist[i] == 1e9)
+        if (dist[i] == INF)
             cout << "INF\n";
         else
             cout << dist[i] << "\n";
