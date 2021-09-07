@@ -110,27 +110,52 @@ print(BFS_with_adj_list(graph_list, root_node))
 
 ### Dijkstra algorithm
 ```
-import heapq  # For priority Queue
+import heapq
 
 def dijkstra(graph, start):
-  distances = {node: float('inf') for node in graph}  # Distance from start
-  distances[start] = 0 
-  queue = []
-  heapq.heappush(queue, [distances[start], start])  # Search from start node
-
-  while queue:  # queue에 남아 있는 노드가 없으면 끝
-    current_distance, current_destination = heapq.heappop(queue)  # 탐색 할 노드, 거리를 가져옴.
-
-    if distances[current_destination] < current_distance:  # 기존에 있는 거리보다 길다면, 볼 필요도 없음
-      continue
+'''
+ex.
+graph = {
+    'A': {'B': 8, 'C': 1, 'D': 2},
+    'B': {'C': 2},
+    'C': {'B': 5, 'D': 2},
+    'D': {'E': 3, 'F': 5},
+    'E': {'F': 1},
+    'F': {'A': 5}
+}
+'''
+    distances = {node: float('inf') for node in graph} # 1. 시작정점 start부터 N정점까지의 거리를 담는 배열. 시작 정점 자신을 제외한 모든 정점까지의 거리를 무한대로 초기화한다.
+    distances[start] = 0 # 1. 시작 정점 자신을 제외한 모든 정점까지의 거리를 무한대로 초기화한다.
+    '''
+    distances= {'A': 0, 'B': inf, 'C': inf, 'D': inf, 'E': inf, 'F': inf}
+    '''
+    # 모든 정점들을 거리가 적은 순으로 저장할 priority queue 생성
+    queue = []
+    heapq.heappush(queue, [distances[start], start])  # queue 라는 힙에 [거리, 시작점] 라는 리스트를 추가함
+    '''
+    queue = [(C와의 거리 3, 시작점 A), (B와의 거리9, 시작점A)]
+    '''
     
-    for new_destination, new_distance in graph[current_destination].items():
-      distance = current_distance + new_distance  # 해당 노드를 거쳐 갈 때 거리
-      if distance < distances[new_destination]:  # 알고 있는 거리 보다 작으면 갱신
-        distances[new_destination] = distance
-        heapq.heappush(queue, [distance, new_destination])  # 다음 인접 거리를 계산 하기 위해 큐에 삽입
-    
-  return distances
+    '''
+    Note)
+    heappush(heap, item): heap에 item을 추가함
+    '''
+
+    while queue: # 3. 우선순위 큐에서 인접 정점을 하나씩 차례대로 꺼냄, (A의 인접노드 B, C 를 방문한다고 가정)
+        current_distance, current_node = heapq.heappop(queue) # current distance = 8, current_node = B
+
+        if distances[current_node] < current_distance: #3-2. 이미 기록된 인접 정점까지의 거리가 더 짧다면 넘어간다.
+        # distances에 기록된 B까지의 거리 (INF) < 9
+            continue 
+        
+        for new_destination, new_distance in graph[current_destination].items(): # 현재 노드(B)에서 갈 수 있는 정점들
+            distance = current_distance + new_distance # B->C 까지 2 였으면 9+2 = 11 
+            if distance < distance[new_destination]: # 11 < A->C까지 (2) 이면? (이 경우에는 no)
+            distance[new_destination] = distance # distance[C] = 11
+            heapq.heappush(queue, [distance, new_destination]) # queue 라는 힙에 [새 거리, 새 시작점] 이렇게 생긴 리스트를 추가함
+
+    return distances
+
 ```
 
 ### Floyd Warshall algorithm
