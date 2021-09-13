@@ -86,7 +86,6 @@ public class Main {
         // 최단 거리 테이블을 모두 무한으로 초기화
         Arrays.fill(distance, INF);
 
-        // 다익스트라 알고리즘을 수행
         dijkstra(start);
 
         for (int i = 1; i <= V; i++) {
