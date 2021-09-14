@@ -65,7 +65,7 @@ public class Main {
 
         // 그래프 초기화
         for (int i = 0; i <= V; i++) {
-            graph.add(new ArrayList<Node>()); // 연결된 인접 노드의 정보를 담기 위해서 매번 arraylist 인스턴스를 이용해 초기화
+            graph.add(new ArrayList<Node>());
         }
 
         // 모든 간선 정보를 입력받기
