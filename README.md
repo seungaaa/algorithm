@@ -1,2 +1,2 @@
 # algorithm
-Repository for algorithm collaboration
+Repository for algorithm collaboration!
