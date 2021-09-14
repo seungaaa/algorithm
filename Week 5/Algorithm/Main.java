@@ -30,7 +30,7 @@ class Node implements Comparable<Node> {
 }
 
 public class Main {
-    public static final int INF = Integer.MAX_VALUE;
+    public static final int INF = Integer.MAX_VALUE; // 모든 노드까지 가는 비용을 최대로 설정
     public static int V, E, start;
     // 각 노드에 연결되어 있는 노드에 대한 정보를 담는 배열
     public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>();
