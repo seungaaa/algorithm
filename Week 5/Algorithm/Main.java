@@ -31,7 +31,7 @@ class Node implements Comparable<Node> {
 }
 
 public class Main {
-    public static final int INF = Integer.MAX_VALUE; // 무한을 의미하는 값으로 10억을 설정    
+    public static final int INF = Integer.MAX_VALUE; // 최댓값으로 잡아줌
     public static int V, E, start; // 노드의 개수(V), 간선의 개수(E), 시작 노드 번호(Start)    
     public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>(); // 각 노드에 연결되어 있는 노드에 대한 정보를 담는 배열    
     public static int[] distance = new int[30001]; // 최단 거리 테이블 만들기
