@@ -1,5 +1,3 @@
-package week5;
-
 import java.util.*;
 
 class Node implements Comparable<Node> {
