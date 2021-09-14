@@ -1,6 +1,6 @@
 package baekjoon;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class While3 {
 
