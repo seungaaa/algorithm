@@ -25,10 +25,10 @@ long long solution(int n, vector<int> times) {
         
         if (cnt >= n) {
             answer = mid;
-            end = mid -1;
+            end = mid - 1;
         }
         else
-            start = mid +1;
+            start = mid + 1;
     }
     
     return answer;
