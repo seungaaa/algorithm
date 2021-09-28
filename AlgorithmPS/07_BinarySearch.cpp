@@ -14,7 +14,6 @@ long long solution(int n, vector<int> times) {
     sort(times.begin(), times.end());
     unsigned long long start = 1;
     unsigned long long end = times[times.size()-1] * n;
-    unsigned long long mid;
     
     while (start <= end) {
         unsigned long long mid = (start + end) / 2;
@@ -25,10 +24,10 @@ long long solution(int n, vector<int> times) {
         
         if (cnt >= n) {
             answer = mid;
-            end = mid -1;
+            end = mid - 1;
         }
         else
-            start = mid +1;
+            start = mid + 1;
     }
     
     return answer;
