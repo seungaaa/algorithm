@@ -7,14 +7,12 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         int answer = 0;
-        map<char, int> charMap;
-        int start = -1;
-        for (int i = 0; i < s.size(); i++) {
-            if (charMap.count(s[i]) != 0) {
-                start = max(start, charMap[s[i]]);
-            }
+        unordered_map<char, int> charMap;
+        for (int i = 0, j = 0; i < s.size(); ++i) {
+            if (charMap.count(s[i]))
+                j = max(j, charMap[s[i]]+1);
+            answer = max(answer, i-j+1);
             charMap[s[i]] = i;
-            answer = max(answer, i-start);
         }
         return answer;
     }
